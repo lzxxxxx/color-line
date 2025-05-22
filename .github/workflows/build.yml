@@ -30,7 +30,8 @@ jobs:
         pyinstaller --onefile VideoAvgColorLines.py
         
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: executable
-        path: dist/VideoAvgColorLines.exe 
+        path: dist/VideoAvgColorLines.exe
+        compression-level: 9
